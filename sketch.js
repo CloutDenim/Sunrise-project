@@ -43,7 +43,11 @@ function draw(){
 async function getBackgroundImg(){
 
   
-    {"abbreviation":"IST","client_ip":"2601:8c0:701:4ee0:410c:3840:e129:1deb","datetime":"2022-03-11T05:19:29.426404+05:30","day_of_week":5,"day_of_year":70,"dst":false,"dst_from":null,"dst_offset":0,"dst_until":null,"raw_offset":19800,"timezone":"Asia/Kolkata","unixtime":1646956169,"utc_datetime":"2022-03-10T23:49:29.426404+00:00","utc_offset":"+05:30","week_number":10}
+    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+    var responseJSON = await response.json();
+
+    var datetime = responseJSON.datetime;
+ hour = datetime.slice(11,13);
  
   
     
